@@ -11,7 +11,7 @@
 	</a>
 	{{- end }}
 	{{- if .Param "share.reddit" }}
-	<a class="share__link btn" title="{{ T "share-caption" }} Reddit" href="https://www.reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '{{ T "share-caption" }} Reddit', 'width=832,height=624,toolbar=0,status=0'); return false">
+	<a class="share__link btn" title="{{ T "share-caption" }} Reddit" href="https://www.reddit.com{{.Param "share.reddit.community"}}/submit?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" rel="noopener noreferrer" onclick="window.open(this.href, '{{ T "share-caption" }} Reddit', 'width=832,height=624,toolbar=0,status=0'); return false">
 		{{ partial "svg/reddit.svg" (dict "class" "share__icon" ) }}
 	</a>
 	{{- end }}
