@@ -14,11 +14,11 @@
 			{{- $current := (or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .)) }}
 			{{- if .Name }}
 			<li class="main-nav__item{{ if $current }} main-nav__item--active{{ end }}">
-				{{ if not $current }}<a class="main-nav__link" href="{{ .URL }}">{{ end }}
+				{{ if not $current }}{{ if $.IsNode }}<h2>{{ end }}<a class="main-nav__link" href="{{ .URL }}">{{ end }}
 					{{ .Pre }}
 					<span class="main-nav__text">{{ .Name }}</span>
 					{{ .Post }}
-				{{ if not $current }}</a>{{ end }}
+				{{ if not $current }}</a>{{ if $.IsNode }}</h2>{{ end }}{{ end }}
 			</li>
 			{{- end }}
 		{{- end }}

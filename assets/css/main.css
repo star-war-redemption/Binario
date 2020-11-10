@@ -227,6 +227,11 @@ button:not(:-moz-focusring):focus > .main-nav__btn-box {
 	font-size: 0;
 }
 
+.main-nav__item h2 {
+	font-size: 1rem;
+    font-weight: 700;
+}
+
 .main-nav__item {
 	font-size: 1rem;
 	font-weight: 700;
